@@ -1,0 +1,157 @@
+/* TaskList.css */
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    color: gold;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #D5B15D;
+    padding: 20px;
+}
+
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.sidebar .nav-item:hover {
+    opacity: 0.8;
+}
+
+.task-list {
+    width: 75%;
+    padding: 20px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+}
+
+.task-filter {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.task-item .task-info {
+    color: gold;
+}
+
+.task-item .task-date {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.task-item .task-status {
+    display: flex;
+    align-items: center;
+}
+
+.task-item .task-status.complete {
+    color: magenta;
+}
+
+.task-item .task-status.in-progress {
+    color: blue;
+}
+
+.task-status-icon {
+    margin-right: 10px;
+}
+
+.add-button {
+    background-color: #D5B15D;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.add-button:hover {
+    background-color: #c19c4a;
+}
+#box-2btn{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.box-3btn button{
+    color:#D5B15D;
+   background-color:black; 
+   border: none;
+   outline: none;
+}
+
+.box-3btn{
+     margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.espace{
+    width: 50px;
+    height: 50px;
+}
+.btn-tout:hover{
+    color: gold;
+}
+.btn-completer:hover{
+    color: gold;
+}
+.btn-encours:hover{
+    color: gold;
+}
+
+.text1{
+    animation: entrer 3s ease-in-out;
+}
+@keyframes entrer {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}

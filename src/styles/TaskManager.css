@@ -1,0 +1,14 @@
+.text1{
+    animation: entrer 3s ease-in-out;
+}
+@keyframes entrer {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}

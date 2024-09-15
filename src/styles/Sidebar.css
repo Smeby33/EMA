@@ -1,0 +1,35 @@
+/* Styles généraux pour la sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #D5B15D;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Styles pour le bouton de menu sur les écrans de taille tablette et mobile */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Styles pour les écrans tablette et mobile */
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-250px);
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+  }
+  

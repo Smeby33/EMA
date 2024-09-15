@@ -1,0 +1,91 @@
+.utilisateur h4 {
+    background-color: #D5B15D;
+    color: black;
+    border: none;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: flex;
+    align-items:center;
+    margin-bottom: 0.5em;
+  }
+.utilisateur h4:hover {
+    /* background-color: #c19c4a; */
+    color: gold;
+  }
+.utilisateur{
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  /* les icons */
+  .hugeicons--tablet-pen {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 2em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' color='black'%3E%3Cpath d='M2 12c0-4.243 0-6.364 1.318-7.682S6.758 3 11 3h2c4.243 0 6.364 0 7.682 1.318S22 7.758 22 12s0 6.364-1.318 7.682S17.242 21 13 21h-2c-4.243 0-6.364 0-7.682-1.318S2 16.242 2 12m4.5-9v18'/%3E%3Cpath d='m17.006 8.884l.608.606a1.31 1.31 0 0 1 0 1.856l-3.187 3.234a1.76 1.76 0 0 1-.92.483l-1.974.427a.438.438 0 0 1-.523-.52l.42-1.955c.066-.347.235-.667.485-.916l3.227-3.215a1.32 1.32 0 0 1 1.864 0'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .parcontenu1{
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .insertImage{
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+    }
+    .utilisateur{
+      width:20%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .utilisateur h4 {
+      background-color: black;
+      color: #D5B15D;
+      border: none;
+      font-size: 12px;
+      font-weight: bolder;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      text-align: center;
+      display: flex;
+      align-items:center;
+      margin-bottom: 0.5em;
+      margin-left: 5px;
+    }
+    .Parametre-contenue{
+      justify-self: right;
+    }
+    .parcontenu1{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-right: 10px;
+    }
+    .parcontenu{
+      display: none;
+    }
+    .hugeicons--tablet-pen {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      width: 3em;
+      height: 4em;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='gold' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' color='black'%3E%3Cpath d='M2 12c0-4.243 0-6.364 1.318-7.682S6.758 3 11 3h2c4.243 0 6.364 0 7.682 1.318S22 7.758 22 12s0 6.364-1.318 7.682S17.242 21 13 21h-2c-4.243 0-6.364 0-7.682-1.318S2 16.242 2 12m4.5-9v18'/%3E%3Cpath d='m17.006 8.884l.608.606a1.31 1.31 0 0 1 0 1.856l-3.187 3.234a1.76 1.76 0 0 1-.92.483l-1.974.427a.438.438 0 0 1-.523-.52l.42-1.955c.066-.347.235-.667.485-.916l3.227-3.215a1.32 1.32 0 0 1 1.864 0'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+  }

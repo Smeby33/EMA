@@ -1,0 +1,117 @@
+/* Auth.css */
+
+.div {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    color: gold;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.auth h1 {
+    color: #D5B15D;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: entrer 2s ease-in-out;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+}
+
+.utilisateur {
+    margin-bottom: 20px;
+}
+
+.utilisateur label {
+    color: #D5B15D;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.utilisateur input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: gold;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.utilisateur input:focus {
+    border-color: #D5B15D;
+}
+
+.boutonauth1 {
+    background-color: #D5B15D;
+    color: black;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.boutonauth1:hover {
+    background-color: #c19c4a;
+}
+
+.boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boutonauth2 {
+    background-color: transparent;
+    color: #D5B15D;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.boutonauth2:hover {
+    color: gold;
+}
+
+#box-2btn {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+@keyframes entrer {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.boton {
+    animation: entrer 3s ease-in-out;
+}

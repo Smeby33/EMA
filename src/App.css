@@ -1,0 +1,214 @@
+/* App.css */
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+.par{
+  display: none;
+}
+.sidebar {
+  width: 25%;
+  background-color: #D5B15D;
+  padding: 20px;
+  height: 100vh;
+  transition: transform 0.3s ease;
+}
+.sidebar1 {
+  width: 25%;
+  background-color: #D5B15D;
+  padding: 20px;
+  height: 100vh;
+  transition: transform 0.3s ease;
+  display: none;
+}
+.sidebar2 {
+  width: 20%;
+  background-color: #D5B15D;
+  padding: 20px;
+  height: 100vh;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* z-index:1; */
+}
+.btnsider2 {
+  display: flex;
+  flex-direction: column;
+}
+.btnsider2 button {
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #D5B15D;
+  border: none;
+  margin-top: 1em;
+
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.menu-toggle {
+  display: none;
+}
+.btn-add-anime{
+animation: entrer 3s ease-in-out;
+}
+.btn-add-anime1{
+  display: none;
+  background-color: #D5B15D;
+  justify-content: center;
+  align-items: center;
+animation: entrer 3s ease-in-out;
+border-radius:50px;
+width:30px;
+height: 30px;
+
+}
+.btn-add{
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
+  background-color: rgb(0, 0, 0);
+}
+@keyframes entrer {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+@media (max-width: 810px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    background-color: #D5B15D;
+    color: black;
+    padding: 10px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .sidebar1 {
+    display: none;
+  }
+  .sidebar2 {
+    display: none;
+  }
+  .content {
+    margin-left: 0;
+  }
+
+  .content.shifted {
+    margin-left: 75%;
+  }
+  .par{
+    display: none;
+  }
+  .sidebar2 {
+    display: none;
+  }
+  .btn-add-anime1{
+    display: none;
+  }
+}
+
+.content {
+  width: 100%;
+  transition: margin-left 0.3s ease;
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  .sidebar1 {
+    display: flex;
+    position: fixed;         /* La sidebar est fixe en bas de l'écran */
+    bottom: 0;               /* La positionne en bas de la page */
+    width: 100%;             /* Elle occupe toute la largeur */
+    height: auto;            /* Hauteur automatique (ne prend plus toute la hauteur) */
+    align-items: center;
+    z-index: 1000;           /* Assure que la sidebar soit visible au-dessus du contenu */
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebar2 {
+    display: none;
+  }
+  .sidebar1 button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btnsider1{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .content {
+    margin-left: 0;
+
+  }
+  .menu-toggle {
+    display: none;
+    visibility: hidden;
+
+  }
+  .app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background-color: black;
+    margin: 0px;
+    margin-right: -2px;
+  }
+  .par{
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+  }
+  .btn-add-anime1{
+    display: flex;
+  }
+  .btn-add-anime{
+    display: none;
+  }
+}

@@ -1,0 +1,76 @@
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: black;  /* Fond noir */
+    color: gold;  /* Texte en or */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease;  /* Transition fluide pour l'ouverture */
+  }
+  
+  .settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .settings-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: gold;  /* Couleur dorée pour le titre */
+  }
+  
+  .close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: gold;  /* Bouton de fermeture en or */
+    cursor: pointer;
+  }
+  
+  .settings-content {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .settings-item {
+    margin-bottom: 20px;
+  }
+  
+  .settings-button {
+    background-color: #D5B15D;  /* Fond doré */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    color: black;  /* Texte noir pour contraste */
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .settings-button:hover {
+    background-color: #e0c300;  /* Teinte plus foncée de doré pour effet de survol */
+  }
+  
+  .logout-button {
+    background-color:  #D5B15D;
+    color:black;
+    font-weight: bold;
+  }
+  
+  .logout-button:hover {
+    background-color:  #D5B15D;
+  }
+  
+  
