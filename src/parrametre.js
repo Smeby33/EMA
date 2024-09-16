@@ -80,7 +80,7 @@ function Parrametre({onClick}) {
           style={{ display: 'none' }}
           onChange={handleImageChange}
         />
-        <div className="utilisateur"  onClick={onClick} style={{ marginLeft: '5px' }}>
+        <div className="utilisateur1"  onClick={onClick} style={{ marginLeft: '5px' }}>
           <span className="hugeicons--tablet-pen"></span>
         </div>
       </div>

@@ -100,6 +100,11 @@
     width: 100%;
     margin-top: 20px;
 }
+.input-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
 
 @keyframes entrer {
     from {

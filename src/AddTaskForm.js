@@ -20,7 +20,10 @@ const AddTaskForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        if (!title || !date) {
+            alert('Titre et date sont requis');
+            return;
+        }
         // Créer une nouvelle tâche
         const newTask = {
             title,
@@ -30,7 +33,8 @@ const AddTaskForm = () => {
             isPerso,
             id: Date.now(), // Utiliser un timestamp comme identifiant unique
         };
-
+       
+        
         // Ajouter la nouvelle tâche à la liste existante
         const updatedTasks = [...tasks, newTask];
 

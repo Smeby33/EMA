@@ -24,7 +24,7 @@
 }
 .parcontenu{
   display:flex;
-  
+
 }
 
   /* les icons */
@@ -80,6 +80,13 @@
     }
     .parcontenu{
       display: none;
+    }
+    .parcontenu1{
+      display: flex;
+      justify-content: space-between;
+    }
+    .utilisateur1{
+      width:12%;
     }
     .hugeicons--tablet-pen {
       display: flex;
