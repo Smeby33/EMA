@@ -109,9 +109,10 @@
 .add-button:hover {
     background-color: #c19c4a;
 }
-#box-2btn{
+#box-2btn1{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 40%;
 }
 
@@ -123,9 +124,10 @@
 }
 
 .box-3btn{
-     margin-top: 2em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 5em;
 }
 .espace{
     width: 50px;

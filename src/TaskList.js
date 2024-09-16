@@ -50,7 +50,7 @@ const TaskList = () => {
                 >
                     Tout
                 </button>
-                <div id="box-2btn">
+                <div id="box-2btn1">
                     <button
                         className='btn-completer'
                         color="gold"

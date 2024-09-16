@@ -66,7 +66,6 @@ function Parrametre({onClick}) {
         </div>
       </div>
       <div className="parcontenu1">
-        
         <div className="insertImage" onClick={handleDivClick} style={{ backgroundColor: 'black', cursor: 'pointer', border: 'none', borderRadius: '50px', width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {image ? (
             <img src={image} alt="Image de profil" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50px' }} />
@@ -81,9 +80,9 @@ function Parrametre({onClick}) {
           style={{ display: 'none' }}
           onChange={handleImageChange}
         />
-      </div>
-      <div className="utilisateur"  onClick={onClick} style={{ marginLeft: '5px' }}>
+        <div className="utilisateur"  onClick={onClick} style={{ marginLeft: '5px' }}>
           <span className="hugeicons--tablet-pen"></span>
+        </div>
       </div>
       
     </div>

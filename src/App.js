@@ -90,15 +90,15 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <div className="par">
-      <Parrametre onClick={() => setViewSettings(true)} />
-      </div>
-      {/* Bouton pour mobile/tablette */}
-      {screenWidth <= 810 && (
-        <Button className="menu-toggle" onClick={toggleSidebar}>
-          <MenuIcon sx={{ color: 'gold' }} />
-        </Button>
-      )}
+        <div className="par">
+          <Parrametre onClick={() => setViewSettings(true)} />
+        </div>
+        {/* Bouton pour mobile/tablette */}
+        {screenWidth <= 810 && (
+          <Button className="menu-toggle"  sx={{display:'flex',justifyContent:'start',alignItems:'start'}}  onClick={toggleSidebar}>
+            <MenuIcon sx={{ color: 'gold' }} />
+          </Button>
+        )}
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
@@ -125,7 +125,7 @@ const App = () => {
               Personnel  
           </button>
           <button onClick={ouvrirWhatsApp}>
-              WhatsApp
+            <WhatsAppIcon/> Nous contactez
           </button>
           {/* Autres boutons */}
         </div>
@@ -167,9 +167,32 @@ const App = () => {
             <WhatsAppIcon/> Nous contactez
           </button>
         </div>
+      </div>
+
+      {/* Contenu */}
+      <div className="content"> 
+        {viewForm && <AddTaskForm setViewForm={setViewForm} addTask={addTask} />}
+        {viewList && <TaskList tasks={tasks} />}
+        {viewManager && <TaskManager tasks={tasks} updateTask={updateTask} addTask={addTask} />}
+        {viewTravail && <Travail tasks={tasks} updateTask={updateTask} addTask={addTask} />}
+        {viewPersonnel && <Personnel tasks={tasks} updateTask={updateTask} addTask={addTask} />}
+
         
-       </div>
-       <div className="sidebar1">
+          <div className="btn-add">
+            <button className="btn-add-anime" onClick={() =>  { setViewForm(true); setViewList(false); setViewManager(false); setViewPersonnel(false); setViewTravail(false) }} style={{ color: 'black', backgroundColor: 'gold', height: '3em', width: '6em', border: 'none', borderRadius: '5px', fontWeight: 'bold',marginRigth:'20px' }}>Ajouter</button>
+            <button className="btn-add-anime1" onClick={() =>  { setViewForm(true); setViewList(false); setViewManager(false); setViewPersonnel(false); setViewTravail(false) }} style={{ color: 'black', backgroundColor: '#D5B15D',border: 'solid 2px black',justifyContent:'center',alignItem:'center'}}><AddCircleOutlineIcon sx={{ fontSize: '30px', fontWeight: '400'  }} /></button>
+          </div>
+        
+        {viewSettings && (
+          <SettingsPanel
+            onDeleteLast={deleteLastTask}
+            onDeleteAll={deleteAllTasks}
+            onLogout={handleLogout}
+            onClose={() => setViewSettings(false)}  // Fermer le panneau de réglages
+          />
+        )}
+      </div>
+      <div className="sidebar1">
         {/* Ajouter un gestionnaire d'événements pour ouvrir le SettingsPanel */}
         <div className="btnsider1">
 
@@ -200,32 +223,7 @@ const App = () => {
           </button> */}
         </div>
         
-       </div>
-       
-
-      {/* Contenu */}
-      <div className="content"> 
-        {viewForm && <AddTaskForm setViewForm={setViewForm} addTask={addTask} />}
-        {viewList && <TaskList tasks={tasks} />}
-        {viewManager && <TaskManager tasks={tasks} updateTask={updateTask} addTask={addTask} />}
-        {viewTravail && <Travail tasks={tasks} updateTask={updateTask} addTask={addTask} />}
-        {viewPersonnel && <Personnel tasks={tasks} updateTask={updateTask} addTask={addTask} />}
-
-        
-          <div className="btn-add">
-            <button className="btn-add-anime" onClick={() =>  { setViewForm(true); setViewList(false); setViewManager(false); setViewPersonnel(false); setViewTravail(false) }} style={{ color: 'black', backgroundColor: 'gold', height: '3em', width: '6em', border: 'none', borderRadius: '5px', fontWeight: 'bold',marginRigth:'20px' }}>Ajouter</button>
-            <button className="btn-add-anime1" onClick={() =>  { setViewForm(true); setViewList(false); setViewManager(false); setViewPersonnel(false); setViewTravail(false) }} style={{ color: 'black', backgroundColor: '#D5B15D',border: 'solid 2px black',justifyContent:'center',alignItem:'center'}}><AddCircleOutlineIcon sx={{ fontSize: '30px', fontWeight: '400'  }} /></button>
-          </div>
-        
-        {viewSettings && (
-          <SettingsPanel
-            onDeleteLast={deleteLastTask}
-            onDeleteAll={deleteAllTasks}
-            onLogout={handleLogout}
-            onClose={() => setViewSettings(false)}  // Fermer le panneau de réglages
-          />
-        )}
-      </div> 
+       </div> 
     </div>
   );
 };
