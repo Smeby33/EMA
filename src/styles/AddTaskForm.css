@@ -113,4 +113,9 @@
     }
     
 }
+@media (max-width: 600px) {
+    .btn-envoyer{
+        margin-bottom: 100px;
+    }
+}
 

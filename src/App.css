@@ -257,4 +257,7 @@ height: 30px;
   .sidebar.open{
     display: none;
   }
+  .btn-add{
+    margin-bottom: 100px;
+  }
 }

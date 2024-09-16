@@ -115,3 +115,11 @@
 .boton {
     animation: entrer 3s ease-in-out;
 }
+@media (max-width: 600px) {
+    .auth input{
+        width: 100%;
+    }
+    .utilisateur{
+        width: 100%;
+    }
+}
